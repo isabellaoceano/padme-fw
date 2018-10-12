@@ -31,7 +31,8 @@ SACGeometry::SACGeometry()
 
   fCrystalCoating = 100.*um;
 
-  fSACFrontFacePosZ = 300.*cm; // from center of yoke, i.e. 370cm from target, 70cm from front of ECal
+  //fSACFrontFacePosZ = 300.*cm; // from center of yoke, i.e. 370cm from target, 70cm from front of ECal
+  fSACFrontFacePosZ = 2945.*mm; // from center of yoke, i.e. 3975mm from target, 52cm from front of AlStep panel of ECal
 
   fDigiAvgLightSpeed = (2.998E8*m/s)/1.85; // Average light speed inside SAC crystal for Cherenkov spectrum
 

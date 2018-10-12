@@ -52,7 +52,8 @@ ChamberGeometry::ChamberGeometry()
   fCPZRIn = 5.*cm;
   fCPZThick = 1.*cm;
   fCPZLength = 29.*cm;
-  fCPZPosZ = -1.*m;
+  //fCPZPosZ = -1.*m;
+  fCPZPosZ = -103.*cm; // Final design
   fCPZFlangeR = 76.*mm;
   fCPZFlangeThick = 20.*mm;
 
@@ -60,7 +61,8 @@ ChamberGeometry::ChamberGeometry()
   fCPXRIn = 5.*cm;
   fCPXThick = 1.*cm;
   fCPXLength = 25.*cm;
-  fCPXPosZ = -1.*m;
+  //fCPXPosZ = -1.*m;
+  fCPXPosZ = -103.*cm; // Final design
   fCPXFlangeR = 76.*mm;
   fCPXFlangeThick = 20.*mm;
 

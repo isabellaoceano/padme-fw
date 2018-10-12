@@ -20,13 +20,15 @@ EVetoGeometry::EVetoGeometry()
 
   // Inizialize default parameters
 
-  fFingerDist0 = 10.309*mm ; // Need drawings!
-  fFingerPitch = 10.309*mm; // Need drawings!
+  //fFingerDist0 = 10.309*mm; // Need drawings!
+  //fFingerPitch = 10.309*mm; // Need drawings!
+  fFingerDist0 = 26.0*mm; // Measured on final drawing
+  fFingerPitch = 11.0*mm; // Measured on final drawing
 
   fEVetoNFingers = 96;
 
   fFingerSizeX =  1.0*cm;
-  fFingerSizeY = 17.8*cm;  //raw correction M. Raggi need Drawings
+  fFingerSizeY = 17.8*cm;
   fFingerSizeZ =  1.0*cm;
 
   fGrooveSizeX = 1.3*mm;
@@ -34,13 +36,19 @@ EVetoGeometry::EVetoGeometry()
 
   fFingerRotY = 10.*deg; // Need drawings!
 
-  fSupportSizeX =   1.5*cm; // Need drawings!
+  //fSupportSizeX =   1.5*cm; // Need drawings!
+  fSupportSizeX =   2.8*cm; // Need drawings!
   fSupportSizeY =   0.5*cm; // Need drawings!
-  fSupportSizeZ = 100.0*cm; // Need drawings!
+  //fSupportSizeZ = 100.0*cm; // Need drawings!
+  fSupportSizeZ = 110.0*cm; // Measured on final drawing
 
-  fEVetoInnerFacePosX = -20.*cm;
+  //fEVetoInnerFacePosX = -20.*cm;
+  fEVetoInnerFacePosX = -17.8*cm; // Position along X from center to front face of support
 
-  fEVetoFrontFacePosZ = -483.55*mm; // Start 6.45mm from inner face of vacuum chamber (final position to be decided)
+  fEVetoFingerCenterPosX = 1.6*cm; // Distance along X from front face of support to center of finger
+
+  //fEVetoFrontFacePosZ = -483.55*mm; // Start 6.45mm from inner face of vacuum chamber
+  fEVetoFrontFacePosZ = -472.55*mm; // Start 6.45mm from inner face of vacuum chamber
 
   fEVetoSensitiveDetectorName = "EVetoSD";
 
@@ -56,7 +64,7 @@ G4double EVetoGeometry::GetFingerPosX(G4int idx)
     printf("EVetoGeometry::GetFingerPosX - ERROR - Requested finger at index %d\n",idx);
     return 0.*cm;
   }
-  return 0.*cm;
+  return 0.5*fSupportSizeZ-fEVetoFingerCenterPosX;
 }
 
 G4double EVetoGeometry::GetFingerPosY(G4int idx)

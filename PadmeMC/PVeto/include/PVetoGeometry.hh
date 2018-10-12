@@ -91,6 +91,9 @@ public:
   // Set position along X of PVeto internal face
   void SetPVetoInnerFacePosX(G4double x) { fPVetoInnerFacePosX = x; }
 
+  // Set position along X of center of finger wrt PVeto internal face
+  void SetPVetoFingerCenterPosX(G4double x) { fPVetoFingerCenterPosX = x; }
+
   // Set position along Z of PVeto front face
   void SetPVetoFrontFacePosZ(G4double z) { fPVetoFrontFacePosZ = z; }
 
@@ -118,6 +121,7 @@ private:
   G4double fSupportSizeZ;
 
   G4double fPVetoInnerFacePosX; // Position along X axis of PVeto inner face (i.e. inner face of support)
+  G4double fPVetoFingerCenterPosX; // Distance along X from front face of support to center of finger
   G4double fPVetoFrontFacePosZ; // Position along Z axis of PVeto front face (i.e. front face of support)
 
   G4String fPVetoSensitiveDetectorName;
