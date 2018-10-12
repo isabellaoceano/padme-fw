@@ -64,7 +64,7 @@ G4double PVetoGeometry::GetFingerPosX(G4int idx)
     printf("PVetoGeometry::GetFingerPosX - ERROR - Requested finger at index %d\n",idx);
     return 0.*cm;
   }
-  return -0.5*fSupportSizeZ+fPVetoFingerCenterPosX;
+  return -0.5*fSupportSizeX+fPVetoFingerCenterPosX;
 }
 
 G4double PVetoGeometry::GetFingerPosY(G4int idx)

@@ -64,7 +64,7 @@ G4double EVetoGeometry::GetFingerPosX(G4int idx)
     printf("EVetoGeometry::GetFingerPosX - ERROR - Requested finger at index %d\n",idx);
     return 0.*cm;
   }
-  return 0.5*fSupportSizeZ-fEVetoFingerCenterPosX;
+  return 0.5*fSupportSizeX-fEVetoFingerCenterPosX;
 }
 
 G4double EVetoGeometry::GetFingerPosY(G4int idx)
